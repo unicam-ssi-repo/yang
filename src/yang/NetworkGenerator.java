@@ -54,6 +54,7 @@ public class NetworkGenerator {
             // the id is the node index.
             // we need to compute the x and y.
             // check if we created a node.
+
            this.nodes.add(this.createNode(iNodes));
         }
     }
@@ -64,7 +65,7 @@ public class NetworkGenerator {
         }else{
             Random r = new Random();
             int selectedNode = r.nextInt(this.nodes.size());
-            double randomDensity = -this.density + (this.density + this.density) * r.nextDouble() ; // negative also.
+            double randomDensity;
 
             long selectedNodeX = this.nodes.get(selectedNode).getX();
             long selectedNodeY = this.nodes.get(selectedNode).getY();
@@ -72,6 +73,7 @@ public class NetworkGenerator {
             long addnewNodeSelX,addnewNodeSelY;
             long newNodeSelX,newNodeSelY;
             do {
+                randomDensity = -this.density + (this.density + this.density) * r.nextDouble() ; // negative also.
                 addnewNodeSelX = (long) (randomDensity * radius);
                 addnewNodeSelY  = (long) (randomDensity * radius);
             }while (this.nodes.get(selectedNode).equalsPosition(selectedNodeX+addnewNodeSelX,selectedNodeY+addnewNodeSelY));
