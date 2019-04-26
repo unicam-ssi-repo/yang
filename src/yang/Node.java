@@ -53,4 +53,8 @@ public class Node {
     public boolean equalsPosition(long x2,long y2){
         return x==x2 && y==y2;
     }
+
+    public String toString(){
+        return this.id+";"+this.x+";"+this.y;
+    }
 }

@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc5e6049-6918-40d1-a811-d7889d6966a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/yang/NetworkGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/yang/NetworkStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/yang/test/NetworkStreamTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/yang/yang/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yang/yang/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/yang/yang/NetworkGeneratorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/yang/yang/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yang/yang/Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/yang/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/yang/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/yang/NetworkGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/yang/NetworkGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yang/NetworkReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yang/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/yang/Node.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/yang/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -33,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/yang/NetworkGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+            <state relative-caret-position="974">
+              <caret line="76" column="54" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#700#701#0" expanded="true" />
@@ -47,10 +50,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/yang/NetworkGeneratorTest.java">
+        <entry file="file://$PROJECT_DIR$/src/yang/NetworkStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="224">
+              <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1221#1227#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/yang/test/NetworkStreamTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/yang/test/NetworkGeneratorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -68,10 +93,12 @@
         <entry file="file://$PROJECT_DIR$/src/yang/Node.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="434">
-              <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
               <folding>
                 <element signature="e#1076#1077#0" expanded="true" />
                 <element signature="e#1109#1110#0" expanded="true" />
+                <element signature="e#1148#1149#0" expanded="true" />
+                <element signature="e#1179#1180#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,9 +109,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
-        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -103,11 +130,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/yang/Generator.java" />
-        <option value="$PROJECT_DIR$/src/yang/Node.java" />
-        <option value="$PROJECT_DIR$/src/yang/Main.java" />
-        <option value="$PROJECT_DIR$/src/yang/test/NetworkGeneratorTest.java" />
         <option value="$PROJECT_DIR$/src/yang/NetworkGenerator.java" />
         <option value="$PROJECT_DIR$/src/yang/NetworkGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/src/yang/test/NetworkGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/src/yang/NetworkReader.java" />
+        <option value="$PROJECT_DIR$/src/yang/Node.java" />
+        <option value="$PROJECT_DIR$/src/yang/Main.java" />
+        <option value="$PROJECT_DIR$/src/yang/NetworkStreamTest.java" />
+        <option value="$PROJECT_DIR$/src/yang/test/NetworkStreamTest.java" />
+        <option value="$PROJECT_DIR$/src/yang/NetworkStream.java" />
       </list>
     </option>
   </component>
@@ -170,6 +201,13 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="yang" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="yang" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="yang" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="yang" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -214,13 +252,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.test1">
+  <component name="RunManager" selected="JUnit.NetworkStreamTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="yang.Main" />
       <module name="yang" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NetworkStreamTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yang.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="yang.test" />
+      <option name="MAIN_CLASS_NAME" value="yang.test.NetworkStreamTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -239,9 +292,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.test1" />
+      <item itemvalue="JUnit.NetworkStreamTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NetworkStreamTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -260,35 +315,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test1 - 2019.04.26 at 16h 07m 46s.xml">
-      <configuration name="test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test1 - 2019.04.26 at 16h 07m 54s.xml">
-      <configuration name="test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test1 - 2019.04.26 at 16h 08m 05s.xml">
-      <configuration name="test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test1 - 2019.04.26 at 16h 08m 43s.xml">
-      <configuration name="test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test1 - 2019.04.26 at 16h 09m 23s.xml">
-      <configuration name="test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test1 - 2019.04.26 at 16h 09m 49s.xml">
-      <configuration name="test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test1 - 2019.04.26 at 16h 09m 55s.xml">
-      <configuration name="test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test1 - 2019.04.26 at 16h 10m 08s.xml">
-      <configuration name="test1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="test1 - 2019.04.26 at 16h 10m 18s.xml">
       <configuration name="test1" configurationId="JUnit" />
     </history-entry>
     <history-entry file="test1 - 2019.04.26 at 16h 11m 11s.xml">
       <configuration name="test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test1 - 2019.04.26 at 16h 12m 44s.xml">
+      <configuration name="test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test1 - 2019.04.26 at 16h 50m 47s.xml">
+      <configuration name="test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NetworkStreamTest - 2019.04.26 at 16h 51m 08s.xml">
+      <configuration name="NetworkStreamTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NetworkStreamTest - 2019.04.26 at 16h 51m 24s.xml">
+      <configuration name="NetworkStreamTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NetworkStreamTest - 2019.04.26 at 16h 54m 09s.xml">
+      <configuration name="NetworkStreamTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NetworkStreamTest - 2019.04.26 at 16h 54m 43s.xml">
+      <configuration name="NetworkStreamTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NetworkStreamTest - 2019.04.26 at 16h 59m 53s.xml">
+      <configuration name="NetworkStreamTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NetworkStreamTest - 2019.04.26 at 17h 00m 33s.xml">
+      <configuration name="NetworkStreamTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -304,8 +359,8 @@
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983871" visible="true" weight="0.25239617" />
+      <window_info id="Structure" order="1" sideWeight="0.5016129" side_tool="true" weight="0.25239617" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -350,17 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/yang/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-          <folding>
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/yang/test/NetworkGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -377,15 +421,56 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+        <state relative-caret-position="107">
+          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/yang/test/NetworkGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/yang/NetworkReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/yang/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+          <folding>
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/yang/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/yang/NetworkGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+        <state relative-caret-position="974">
+          <caret line="76" column="54" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#700#701#0" expanded="true" />
@@ -396,17 +481,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/yang/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/yang/test/NetworkStreamTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/yang/NetworkGeneratorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/yang/NetworkStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="224">
+          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1221#1227#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
