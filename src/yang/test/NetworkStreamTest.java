@@ -15,7 +15,7 @@ class NetworkStreamTest {
 
     @Test
     void saveNetwork() throws IOException {
-        NetworkGenerator ng = new NetworkGenerator(10,10, 1,50,30);
+        NetworkGenerator ng = new NetworkGenerator(10,10, 1,50,30,false);
         ng.generateNetwork();
 
         File tempFile = File.createTempFile("tempFile", ".txt");

@@ -42,7 +42,7 @@ public class NetworkStream {
         ArrayList<Node> nodes = netGenerator.getNodes();
         bw.write("\"y\" \"x\" \"id\"");
         for (int ni = 0; ni < nodes.size(); ni++){
-            bw.write(nodes.get(ni).toString());
+            bw.write(nodes.get(ni).toString()+"\n");
         }
 
         bw.close();

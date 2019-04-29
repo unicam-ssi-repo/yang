@@ -53,6 +53,6 @@ public class Node {
     }
 
     public String toString(){
-        return this.y+";"+this.x+";"+this.id;
+        return this.y+" "+this.x+" "+this.id;
     }
 }

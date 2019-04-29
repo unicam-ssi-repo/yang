@@ -1,5 +1,7 @@
 package yang;
 
+import java.io.IOException;
+
 public class Main {
     /**
      *  private long numberNodes;
@@ -14,17 +16,17 @@ public class Main {
      *  - args[5] -> masterY
      * @param args
      */
-    public static void main(String[] args) {
-        if (args.length != 6){
+    public static void main(String[] args) throws IOException {
+        if (args.length != 5){
             throw new IllegalArgumentException("Requires all parameters.");
         }
-        long   numberOfNodes = Integer.parseInt(args[1]);
-        double radius = Double.parseDouble(args[2]);
-        double density = Double.parseDouble(args[3]);
-        int masterX = Integer.parseInt(args[4]);
-        int masterY = Integer.parseInt(args[5]);
-        NetworkGenerator ng = new NetworkGenerator(numberOfNodes,radius,density,masterX,masterY);
+        long   numberOfNodes = Integer.parseInt(args[0]);
+        double radius = Double.parseDouble(args[1]);
+        double density = Double.parseDouble(args[2]);
+        int masterX = Integer.parseInt(args[3]);
+        int masterY = Integer.parseInt(args[4]);
+        NetworkGenerator ng = new NetworkGenerator(numberOfNodes,radius,1,masterX,masterY,false);
         ng.generateNetwork();
-        NetworkStream.printNetwork(ng);
+        NetworkStream.saveNetwork(ng,"test1.txt");
     }
 }
