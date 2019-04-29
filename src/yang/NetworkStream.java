@@ -6,6 +6,20 @@ import java.util.ArrayList;
 
 public class NetworkStream {
     /**
+     * Print the network model
+     * @param netGenerator
+     * @param path
+     */
+    public static void printNetwork(NetworkGenerator netGenerator)  {
+
+        ArrayList<Node> nodes = netGenerator.getNodes();
+        System.out.println("\"y\" \"x\" \"id\"");
+        for (int ni = 0; ni < nodes.size(); ni++){
+            System.out.println(nodes.get(ni).toString());
+        }
+    }
+
+    /**
      * Save the network method
      * @param netGenerator
      * @param path
@@ -26,7 +40,7 @@ public class NetworkStream {
 
 
         ArrayList<Node> nodes = netGenerator.getNodes();
-        bw.write("Name;x;y");
+        bw.write("\"y\" \"x\" \"id\"");
         for (int ni = 0; ni < nodes.size(); ni++){
             bw.write(nodes.get(ni).toString());
         }

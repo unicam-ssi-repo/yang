@@ -47,14 +47,12 @@ public class Node {
         }else{
             return false;
         }
-
-
     }
     public boolean equalsPosition(long x2,long y2){
         return x==x2 && y==y2;
     }
 
     public String toString(){
-        return this.id+";"+this.x+";"+this.y;
+        return this.y+";"+this.x+";"+this.id;
     }
 }

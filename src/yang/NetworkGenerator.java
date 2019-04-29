@@ -11,7 +11,7 @@ public class NetworkGenerator {
     private long MasterY;
     private ArrayList<Node> nodes;
 
-    public NetworkGenerator(long numberNodes, double radius, double density, long MasterX, long MasterY) {
+    public NetworkGenerator(long numberNodes, double radius, double density, long MasterX, long MasterY,boolean intelligentNode) {
         this.numberNodes = numberNodes;
         this.radius = radius;
         this.density = density;
