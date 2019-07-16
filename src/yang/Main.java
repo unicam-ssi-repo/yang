@@ -1,5 +1,11 @@
 package yang;
 
+import yang.generators.twod.RadiusClusterNetworkGenerator;
+import yang.generators.twod.interconnected.NetworkGeneratorInterconnected2DInstance;
+import yang.generators.zerod.NetworkGeneratorNoSpaceInstance;
+
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
@@ -17,16 +23,49 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) throws IOException {
-        if (args.length != 5){
-            throw new IllegalArgumentException("Requires all parameters.");
+        int n = 1;
+        double radius;
+        int attempt = 0;
+        RadiusClusterNetworkGenerator ng;
+        boolean found;
+        while(n!=31){
+            attempt = 0;
+            found = true;
+            do {
+                ng = new RadiusClusterNetworkGenerator(n, 10000, 0, 0, 0);
+                //System.out.println(ng);
+                RadiusClusterNetworkInstance ngi = new RadiusClusterNetworkInstance(ng);
+                // radius = ngi.decidMinimumeNodeRadiusForInterconnectedNetwork(1000, 2000);
+                NetworkGeneratorInterconnected2DInstance space = ng.toInterConnected2D(1500);
+                if (space.isInterconnected()){ found = true; break; }
+                attempt++;
+            }while(attempt<1000);
+
+
+            if (found == false){
+                System.out.println("Avoid network with size: "+n);
+            }else{
+                radius = 1500;
+                System.out.println("Network with size: "+n+" with radius:"+radius);
+                Main.printSolution("examples/"+n+"_"+radius+"_"+"wifi.txt",ng.toString());
+                Main.printSolution("examples/"+n+"_"+radius+"_"+".txt",ng.toInterConnected0D(radius).toString());
+            }
+            //System.out.println(ng.toString());
+            //System.out.println(ng.toInterConnected0D(radius));
+            n++;
         }
-        long   numberOfNodes = Integer.parseInt(args[0]);
-        double radius = Double.parseDouble(args[1]);
-        double density = Double.parseDouble(args[2]);
-        int masterX = Integer.parseInt(args[3]);
-        int masterY = Integer.parseInt(args[4]);
-        NetworkGenerator ng = new NetworkGenerator(numberOfNodes,radius,1,masterX,masterY,false);
-        ng.generateNetwork();
-        NetworkStream.saveNetwork(ng,"test1.txt");
+
+    }
+
+    public static void printSolution(String  file, String filecontent){
+        File f = new File(file);
+        if(f.exists() && !f.isDirectory()) {
+            return;
+        }
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(filecontent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
