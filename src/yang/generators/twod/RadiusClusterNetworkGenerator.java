@@ -7,7 +7,11 @@ import java.util.Random;
 public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
     private int radius;
     private double density;
-    private int basex,basey;
+    private int basex;
+
+
+
+    private int basey;
     private Random random = new Random();
 
     public RadiusClusterNetworkGenerator(int n, int radius,double density){
@@ -32,11 +36,14 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
         Random r =new Random();
         double x,y;
         double sparse = 1 - this.density;
-
+        // add Master node.
+        this.nodes.add(new SpaceNode(this.nodes.size(),this.basex,this.basey));
         while (this.nodes.size()!=n) {
             x = this.basex + this.generateX(this.radius*sparse);
             y = this.basey + this.generateY(this.radius*sparse);
-            this.nodes.add(new SpaceNode(this.nodes.size(),x,y));
+            if (this.basex != x || this.basey != y){ // cannot stay over master.
+                this.nodes.add(new SpaceNode(this.nodes.size(),x,y));
+            }
         }
     }
 
@@ -61,7 +68,13 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
         return y;
     }
 
+    public int getBasex() {
+        return basex;
+    }
 
+    public int getBasey() {
+        return basey;
+    }
 
 
 }

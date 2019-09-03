@@ -32,7 +32,7 @@ public abstract class NetworkGenerator2DCore extends NetworkGeneratorCore {
         return new NetworkGeneratorNoSpaceInstance(nodes);
     }
 
-    public NetworkGeneratorInterconnected2DInstance toInterConnected2D(double nodeRadius){
+    public NetworkGeneratorInterconnected2DInstance toInterConnected2D(double minNodeRadius,double maxNodeRadius){
         SpaceNode node2;
         SpaceConnectedNode node;
         Neighbor neighbor;
@@ -41,10 +41,13 @@ public abstract class NetworkGenerator2DCore extends NetworkGeneratorCore {
             node2 = (SpaceNode) this.nodes.get(i);
             node = node2.toSpaceInterConnectedNode();
             for (int ni = 0; ni < this.nodes.size(); ni++) {
-                if (ni!=i&&this.isReachable(ni,i,nodeRadius)){
+                if (ni!=i&&this.isReachable(ni,i,maxNodeRadius)){
                     neighbor = new Neighbor();
                     SpaceNode master = (SpaceNode) this.nodes.get(i);
                     neighbor.distance = master.getDistance((SpaceNode)this.nodes.get(ni));
+                    if (neighbor.distance < minNodeRadius){
+                        return null;
+                    }
                     neighbor.nodeID = ni;
                     node.getNeighbors().add(neighbor);
                 }

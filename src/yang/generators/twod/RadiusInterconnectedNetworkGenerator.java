@@ -20,6 +20,7 @@ public class RadiusInterconnectedNetworkGenerator extends NetworkGenerator2DCore
         double x = r.nextInt(32000);
         double y = r.nextInt(32000);
         int sparse = 1 - this.density;
+
         while (this.nodes.size()!=n) {
             this.nodes.add(new SpaceNode(this.nodes.size(),x,y));
             x = x + this.generateX(radius*sparse);

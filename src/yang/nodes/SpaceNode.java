@@ -67,7 +67,7 @@ public class SpaceNode extends Node {
     public double _getDistanceXY( double x1, double y1, double x2, double y2) {
         double firstTerm = (x2-x1);
         double secondTerm = (y2-y1);
-        return Math.sqrt((firstTerm*firstTerm)-(secondTerm*secondTerm));
+        return Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
     }
 
     public SpaceConnectedNode toSpaceInterConnectedNode() {

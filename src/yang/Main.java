@@ -36,9 +36,14 @@ public class Main {
                 //System.out.println(ng);
                 RadiusClusterNetworkInstance ngi = new RadiusClusterNetworkInstance(ng);
                 // radius = ngi.decidMinimumeNodeRadiusForInterconnectedNetwork(1000, 2000);
-                NetworkGeneratorInterconnected2DInstance space = ng.toInterConnected2D(1500);
-                if (space.isInterconnected()){ found = true; break; }
-                attempt++;
+                NetworkGeneratorInterconnected2DInstance space = ng.toInterConnected2D(100,1500);
+                if (space != null) {
+                    if (space.isInterconnected()) {
+                        found = true;
+                        break;
+                    }
+                }
+                   attempt++;
             }while(attempt<1000);
 
 
