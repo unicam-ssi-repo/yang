@@ -1,5 +1,6 @@
 package yang.nodes;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public class SpaceNode extends Node {
@@ -72,5 +73,35 @@ public class SpaceNode extends Node {
 
     public SpaceConnectedNode toSpaceInterConnectedNode() {
         return new SpaceConnectedNode(this.getId(),this.getX(),this.getY(),new ArrayList<>());
+    }
+
+    public void draw(Graphics2D g) {
+        if (this.getId() == 0){
+            g.setColor(Color.red);
+        } else{
+            g.setColor(Color.orange);
+        }
+
+        int nodeRadius = 75;
+        g.fillOval((int) this.getX() - nodeRadius, (int) this.getY() - nodeRadius,
+                nodeRadius * 2, nodeRadius * 2);
+
+        g.setFont(new Font("Serif", Font.PLAIN, 20));
+        g.setColor(Color.black);
+        String s = String.valueOf(this.getId());
+        FontMetrics fm = g.getFontMetrics();
+
+        double textWidth = fm.getStringBounds(s, g).getWidth();
+        g.setColor(Color.gray);
+        g.drawString(s, (int) ((int) this.getX() - textWidth/2), ((int) this.getY() + fm.getMaxAscent() / 2));
+    }
+
+    public void drawBackground(Graphics2D g) {
+        g.setColor(Color.gray);
+        float alpha = 5 * 0.1f;
+        AlphaComposite alcom = AlphaComposite.getInstance(
+                AlphaComposite.SRC_OVER, alpha);
+        g.setComposite(alcom);
+        g.fillOval((int) this.getX() - 1500, (int)this.getY() - 1500, 2 * 1500, 2 * 1500);
     }
 }

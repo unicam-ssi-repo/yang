@@ -57,6 +57,7 @@ public abstract class NetworkGenerator2DCore extends NetworkGeneratorCore {
         return new NetworkGeneratorInterconnected2DInstance(nodes);
     }
 
+
     /**
      * Check if @to node is inside the range of from node.
      * @param from

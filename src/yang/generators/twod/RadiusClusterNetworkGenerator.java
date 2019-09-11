@@ -38,6 +38,7 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
         double sparse = 1 - this.density;
         // add Master node.
         this.nodes.add(new SpaceNode(this.nodes.size(),this.basex,this.basey));
+
         while (this.nodes.size()!=n) {
             x = this.basex + this.generateX(this.radius*sparse);
             y = this.basey + this.generateY(this.radius*sparse);
@@ -53,8 +54,8 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
         double r = radius * Math.sqrt(this.random.nextDouble());
 
 // If you need it in Cartesian coordinates
-        double x = Math.abs(r * Math.cos(a));
-        double y = Math.abs(r * Math.sin(a));
+        double x = (r * Math.cos(a));
+        double y = (r * Math.sin(a));
         return x;
     }
 
@@ -63,8 +64,8 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
         double r = radius * Math.sqrt(this.random.nextDouble());
 
 // If you need it in Cartesian coordinates
-        double x = Math.abs(r * Math.cos(a));
-        double y = Math.abs(r * Math.sin(a));
+        double x = (r * Math.cos(a));
+        double y = (r * Math.sin(a));
         return y;
     }
 

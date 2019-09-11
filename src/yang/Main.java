@@ -2,7 +2,7 @@ package yang;
 
 import yang.generators.twod.RadiusClusterNetworkGenerator;
 import yang.generators.twod.interconnected.NetworkGeneratorInterconnected2DInstance;
-import yang.generators.zerod.NetworkGeneratorNoSpaceInstance;
+import yang.helpers.RadiusClusterNetworkInstance;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -48,12 +48,12 @@ public class Main {
 
 
             if (found == false){
-                System.out.println("Avoid network with size: "+n);
+                // System.out.println("Avoid network with size: "+n);
             }else{
                 radius = 1500;
-                System.out.println("Network with size: "+n+" with radius:"+radius);
-                Main.printSolution("examples/"+n+"_"+radius+"_"+"wifi.txt",ng.toString());
-                Main.printSolution("examples/"+n+"_"+radius+"_"+".txt",ng.toInterConnected0D(radius).toString());
+                //System.out.println("Network with size: "+n+" with radius:"+radius);
+                //Main.printSolution("examples/"+n+"_"+radius+"_"+"wifi.txt",ng.toString());
+                // Main.printSolution("examples/"+n+"_"+radius+"_"+".txt",ng.toInterConnected0D(radius).toString());
             }
             //System.out.println(ng.toString());
             //System.out.println(ng.toInterConnected0D(radius));

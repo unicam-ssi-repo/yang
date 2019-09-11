@@ -1,5 +1,6 @@
 package yang.nodes;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Node {
@@ -30,5 +31,12 @@ public class Node {
             }
         }
         return false;
+    }
+
+    public void draw(Graphics2D g) {
+
+    }
+
+    public void drawBackground(Graphics2D g) {
     }
 }
