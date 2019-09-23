@@ -53,8 +53,8 @@ public abstract class NetworkGeneratorCore {
         }
     }
 
-    public void saveImage(String path) throws IOException {
-        BufferedImage image = new BufferedImage(10000, 10000, BufferedImage.TYPE_INT_RGB);
+    public void saveImage(int networkWidth, int networkHeight,String path) throws IOException {
+        BufferedImage image = new BufferedImage(networkWidth, networkHeight, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = image.createGraphics();
         g.setColor(Color.WHITE);
         g.fillRect(0, 0, 10000, 10000);

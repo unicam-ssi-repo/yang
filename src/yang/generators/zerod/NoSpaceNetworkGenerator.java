@@ -4,6 +4,7 @@ import yang.nodes.NoSpaceNode;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.SplittableRandom;
 
 public class NoSpaceNetworkGenerator {
     private final long numberEdges;
@@ -47,7 +48,7 @@ public class NoSpaceNetworkGenerator {
 
             for (int i = 1; i < this.numberEdges; i++) {
                 do{
-                random = new Random().nextInt(this.numberNodes - 1);
+                random = new SplittableRandom().nextInt(this.numberNodes - 1);
                 } while (random == iNodes);
                 this.nodes.get(iNodes).getNeighbors().add(random);
             }

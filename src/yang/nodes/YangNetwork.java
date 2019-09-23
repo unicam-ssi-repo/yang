@@ -27,9 +27,9 @@ public class YangNetwork {
         }
     }
 
-    public void saveNetworkImage(String path){
+    public void saveNetworkImage(int nw, int nh, String path){
         try {
-            this.withSpace.saveImage(path);
+            this.withSpace.saveImage(nw,nh, path);
         } catch (IOException e) {
             e.printStackTrace();
         }

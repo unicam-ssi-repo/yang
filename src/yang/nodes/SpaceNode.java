@@ -54,7 +54,7 @@ public class SpaceNode extends Node {
     public boolean equals(Object obj) {
         if(obj instanceof SpaceNode){
             SpaceNode element = (SpaceNode) obj;
-            if(element != null && super.equals(obj) && this.getX() == element.getX() && this.getY() == element.getY() ){
+            if(element != null  && this.getX() == element.getX() && this.getY() == element.getY() ){
                 return true;
             }
         }
@@ -82,7 +82,7 @@ public class SpaceNode extends Node {
             g.setColor(Color.orange);
         }
 
-        int nodeRadius = 75;
+        int nodeRadius = 10;
         g.fillOval((int) this.getX() - nodeRadius, (int) this.getY() - nodeRadius,
                 nodeRadius * 2, nodeRadius * 2);
 
@@ -102,6 +102,6 @@ public class SpaceNode extends Node {
         AlphaComposite alcom = AlphaComposite.getInstance(
                 AlphaComposite.SRC_OVER, alpha);
         g.setComposite(alcom);
-        g.fillOval((int) this.getX() - 1500, (int)this.getY() - 1500, 2 * 1500, 2 * 1500);
+        g.fillOval((int) this.getX() - 25, (int)this.getY() - 25, 2 * 25, 2 * 25);
     }
 }

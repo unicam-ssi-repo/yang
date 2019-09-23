@@ -19,6 +19,7 @@ public class GridClusterNetworkGenerator extends NetworkGenerator2DCore {
     protected void createNodes(int n) {
         this.createLayers(this.layers,this.squareSize);
     }
+
     public int getNumberOfLayers(int n){
         int nmax = n;
         int size = 1;

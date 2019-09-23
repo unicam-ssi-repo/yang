@@ -1,13 +1,14 @@
 package yang.helpers;
 
+import yang.generators.twod.NetworkGenerator2DCore;
 import yang.generators.zerod.NetworkGeneratorNoSpaceInstance;
 import yang.generators.twod.RadiusClusterNetworkGenerator;
 
 public class RadiusClusterNetworkInstance {
 
-    private final RadiusClusterNetworkGenerator ng;
+    private final NetworkGenerator2DCore ng;
 
-    public RadiusClusterNetworkInstance(RadiusClusterNetworkGenerator ng) {
+    public RadiusClusterNetworkInstance(NetworkGenerator2DCore ng) {
         this.ng = ng;
     }
 

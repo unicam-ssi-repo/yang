@@ -3,6 +3,7 @@ package yang.generators.twod;
 import yang.nodes.SpaceNode;
 
 import java.util.Random;
+import java.util.SplittableRandom;
 
 public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
     private int radius;
@@ -12,7 +13,7 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
 
 
     private int basey;
-    private Random random = new Random();
+    private SplittableRandom random = new SplittableRandom();
 
     public RadiusClusterNetworkGenerator(int n, int radius,double density){
         super(n);
@@ -33,7 +34,6 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
     }
     @Override
     protected void createNodes(int n) {
-        Random r =new Random();
         double x,y;
         double sparse = 1 - this.density;
         // add Master node.
@@ -42,7 +42,8 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
         while (this.nodes.size()!=n) {
             x = this.basex + this.generateX(this.radius*sparse);
             y = this.basey + this.generateY(this.radius*sparse);
-            if (this.basex != x || this.basey != y){ // cannot stay over master.
+            SpaceNode node = new SpaceNode(this.nodes.size(),x,y);
+            if (this.nodes.indexOf(node) == -1){ // cannot stay over master.
                 this.nodes.add(new SpaceNode(this.nodes.size(),x,y));
             }
         }
@@ -55,7 +56,6 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
 
 // If you need it in Cartesian coordinates
         double x = (r * Math.cos(a));
-        double y = (r * Math.sin(a));
         return x;
     }
 
@@ -64,7 +64,6 @@ public class RadiusClusterNetworkGenerator extends NetworkGenerator2DCore {
         double r = radius * Math.sqrt(this.random.nextDouble());
 
 // If you need it in Cartesian coordinates
-        double x = (r * Math.cos(a));
         double y = (r * Math.sin(a));
         return y;
     }
