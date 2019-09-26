@@ -53,17 +53,17 @@ public abstract class NetworkGeneratorCore {
         }
     }
 
-    public void saveImage(int networkWidth, int networkHeight,String path) throws IOException {
+    public void saveImage(int networkWidth, int networkHeight, int nodeRadius, String path) throws IOException {
         BufferedImage image = new BufferedImage(networkWidth, networkHeight, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = image.createGraphics();
         g.setColor(Color.WHITE);
-        g.fillRect(0, 0, 10000, 10000);
+        g.fillRect(0, 0, networkWidth, networkHeight);
         g.setColor(Color.BLACK);
 
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                 RenderingHints.VALUE_ANTIALIAS_ON);
         for (int i = 0; i < nodes.size(); i++) {
-            nodes.get(i).drawBackground(g);
+            nodes.get(i).drawBackground(g, nodeRadius);
         }
         for (int i = 0; i < nodes.size(); i++) {
             nodes.get(i).draw(g);

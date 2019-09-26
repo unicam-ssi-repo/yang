@@ -52,10 +52,14 @@ public class RadiusClusterNetworkGeneratorWithDistance  extends NetworkGenerator
     private boolean checkDistance(SpaceNode node) {
         for (int i = 0; i <  this.nodes.size(); i++) {
             double distance = node.getDistance((SpaceNode) this.nodes.get(i));
+            // All the network
             if (distance < this.minDistance){
                 return false;
             }
-            // All the nodes cannot be near. So at least one.
+        }
+        for (int i = 0;  i <  this.nodes.size(); i++) {
+            double distance = node.getDistance((SpaceNode) this.nodes.get(i));
+            // At least one node needs to reach the new node.
             if (distance <= this.maxDistance){
                 return true;
             }

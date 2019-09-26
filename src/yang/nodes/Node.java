@@ -37,6 +37,6 @@ public class Node {
 
     }
 
-    public void drawBackground(Graphics2D g) {
+    public void drawBackground(Graphics2D g, int nodeRadius) {
     }
 }

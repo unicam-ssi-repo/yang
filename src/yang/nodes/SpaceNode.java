@@ -96,12 +96,12 @@ public class SpaceNode extends Node {
         g.drawString(s, (int) ((int) this.getX() - textWidth/2), ((int) this.getY() + fm.getMaxAscent() / 2));
     }
 
-    public void drawBackground(Graphics2D g) {
+    public void drawBackground(Graphics2D g, int nodeRadius) {
         g.setColor(Color.gray);
         float alpha = 5 * 0.1f;
         AlphaComposite alcom = AlphaComposite.getInstance(
                 AlphaComposite.SRC_OVER, alpha);
         g.setComposite(alcom);
-        g.fillOval((int) this.getX() - 25, (int)this.getY() - 25, 2 * 25, 2 * 25);
+        g.fillOval((int) this.getX() - nodeRadius, (int)this.getY() - nodeRadius, 2 * nodeRadius, 2 * nodeRadius);
     }
 }
