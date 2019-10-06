@@ -33,6 +33,24 @@ public class RadiusClusterNetworkGeneratorWithDistance  extends NetworkGenerator
         this.basey = basey;
         this.createNodes(n);
     }
+    public double getDensity(){
+        double x,y;
+        double minX = Double.POSITIVE_INFINITY, maxX = Double.NEGATIVE_INFINITY,
+                minY = Double.POSITIVE_INFINITY, maxY = Double.NEGATIVE_INFINITY;
+        for (int nc = 0; nc < this.nodes.size(); nc++) {
+            SpaceNode sn = (SpaceNode) this.nodes.get(nc);
+            x = sn.getX();
+            y = sn.getY();
+            minX = (x < minX)?minX:x;
+            minY = (y < minY)?minY:y;
+            maxX = (x > maxX)?x:maxX;
+            maxY = (y > maxY)?y:maxY;
+        }
+        // compute area.
+        double area =(maxX - minX) * (maxY-minY);
+        // Area cannot be zero...
+        return this.nodes.size()/area;
+    }
     @Override
     protected void createNodes(int n) {
         double x,y;
